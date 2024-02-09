@@ -1,2 +1,13 @@
 # StochasticDisease-Dynamics
 **Determination of optimal biomarker for the description of stochastic disease dynamics from longitudinal data**
+
+**Background** - Biomarkers are essentially biological entities in the system, whose quantity determines a disease state. For example, PSA (Prostate Specific Antigen) is a biomarker for prostate cancer. Biomarker quantification can also indicate disease progression and recovery after treatment/transplants. Here, [https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003685], researchers have used Optimal Reaction Coordinate as a Biomarker for the Dynamics of Recovery from Kidney Transplant. The rationale behind this stems from the need for a real-time, clinically measurable parameter (like a biomarker) for accurate disease diagnosis and interventions at the right time. 
+
+Organ transplantation is a complex case where the evolution of post-transplant clinical condition monitoring is highly required. The graft can either be accepted by the body or rejected and this is directly linked with the levels of (the specific) biomarker, which can be measured. NMR spectra of the blood can be used to monitor the same at different time points. The researchers have shown that this is possible in real-time if the dynamics of the process are considered explicitly: the biomarkers can be determined as an optimal reaction coordinate that provides a quantitatively accurate description of the stochastic dynamics of disease progression and recovery. 
+
+Assume that the stochastic disease dynamics can be described by a Markov Chain. When a disease is in a particular state (i) at a given time (t), it has the probability PΔt(j|i) to go to another state (j) at time t+Δt. This transition probability can help us understand disease trajectories from the current state to compute the probability to end up healthy or not. 
+
+One way of understanding this transition is by projecting our multi-dimensional data (NMR spectra data) onto the Committor function. Let's consider a Markov Chain model and define boundaries, corresponding to perfectly ill and extremely ill patients. The committor function for state i, q(i), equals the probability to end up in healthy state rather than in ill state starting from the current state. It is, literally, the likelihood of a positive outcome, the most important information one would like to know about the prognosis of the patient dynamics. This is a supervised approach, however, an unsupervised approach can also be taken. This way, we can project the stochastic dynamics on the eigenvectors of the transition matrix.
+
+I have used the data from this project and carried out a simple analysis. All credit to the authors! This is a replication analysis and not my own work!!
+
